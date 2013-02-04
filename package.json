@@ -1,0 +1,22 @@
+{
+    "name": "licensecheck",
+    "version": "0.1.0",
+    "description": "A quick way to see the licenses of modules you depend on—recursively.",
+    "homepage": "https://github.com/marcello3d/node-licensecheck",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/marcello3d/node-licensecheck.git"
+    },
+    "author": {
+        "name": "Marcello Bastéa-Forte",
+        "email": "marcello@cellosoft.com",
+        "url": "http://marcello.cellosoft.com/"
+    },
+    "dependencies": {
+        "colors": "0.6.0-1"
+    },
+    "license": "zlib",
+    "bin": {
+        "licensecheck": "./bin/licensecheck"
+    }
+}
