@@ -13,7 +13,6 @@ function matchLicense(licenseString) {
     var normalized = normalizeText(licenseString)
     for (var i=0; i<licenses.length; i++) {
         var license = licenses[i]
-        console.log("comparing\n\n"+normalized+"\n\n   WITH   \n\n"+license.contents+"\n\n")
         if (normalized.indexOf(license.contents) >= 0) {
             return license.name
         }
