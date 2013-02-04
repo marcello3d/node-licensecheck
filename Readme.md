@@ -2,11 +2,20 @@ License-check
 ==================
 A quick way to see the licenses of modules you depend on—recursively.
 
-[![Build Status](https://secure.travis-ci.org/marcello3d/node-licensecheck.png)](http://travis-ci.org/marcello3d/node-licensecheck)
-
 Installation
 ------------
 `npm -g install licensecheck`.
+
+Usage
+------------
+`licensecheck [optional dir]`
+
+Example
+-------
+
+    $ licensecheck 
+    ├─┬ licensecheck ── zlib ── package.json
+    │ └── colors ── MIT ── node_modules/colors/MIT-LICENSE.txt
 
 Notes
 -----
