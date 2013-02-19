@@ -16,6 +16,11 @@
         "colors": "0.6.0-1",
         "treeify": "0.4.2"
     },
+    "devDependencies": {
+        "mocha":"1.8.1"
+    },
+    "scripts": {
+        "test":"./node_modules/.bin/mocha "
     },
     "license": "zlib",
     "bin": {
