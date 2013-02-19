@@ -1,4 +1,4 @@
-License-check
+License-check [![Build Status](https://travis-ci.org/marcello3d/node-licensecheck.png)](https://travis-ci.org/marcello3d/node-licensecheck)
 ==================
 A quick way to see the licenses of modules you depend on—recursively.
 
