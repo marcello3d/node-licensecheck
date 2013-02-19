@@ -14,8 +14,9 @@ Example
 -------
 
     $ licensecheck 
-    ├─┬ licensecheck ── zlib ── package.json
-    │ └── colors ── MIT ── node_modules/colors/MIT-LICENSE.txt
+    └─ licensecheck (0.1.0) ── zlib ── package.json
+       ├─ colors (0.6.0-1) ── MIT ── node_modules/colors/MIT-LICENSE.txt
+       └─ treeify (0.4.2) ── MIT (http://lp.mit-license.org/) ── node_modules/treeify/package.json
 
 Notes
 -----

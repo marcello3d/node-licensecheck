@@ -1,28 +1,32 @@
 // Based on code shamelessly lifted from https://github.com/shtylman/node-weaklink (with permission)
 
 var colors = require('colors')
+var treeify = require('treeify')
 
 var licensecheck = require('./index.js')
 
-function print_deps(info, level, last) {
-    level = level || 0;
+function mapDeps(info) {
+    var key = info.name + (" ("+ info.version+")").grey + ' ── '
 
-    var arr = new Array(level + 1)
-    var out = arr.join('│ ') + (last ? '└' : '├')+'─'+(info.deps && info.deps.length ? '┬' : '─') +' ' + info.name + ' ── '
-    
-    if (info.licenseFile) {
+    var file = info.licenseFile
+    if (file) {
+        file = file.replace(/\/node_modules\//g, ' ~ ')
         if (info.license == 'nomatch') {
-            console.log(out + ('unmatched license file: ' + info.licenseFile).yellow)
+            key += ('unmatched license file: ' + file).yellow
         } else {
-            console.log(out + info.license.green + ' ── ' + info.licenseFile.grey)
+            key += info.license.green + ' ── ' + file.grey
         }
     } else {
-        console.log(out + "no license file".red)
+        key += "no license found".red
     }
 
-    info.deps.forEach(function(dep, index, array) {
-        print_deps(dep, level + 1, index == array.length - 1)
+    var tree = {}
+    var dependencies = tree[key] = {}
+    info.deps.map(mapDeps).forEach(function (dependency) {
+        var key = Object.keys(dependency)[0]
+        dependencies[key] = dependency[key]
     })
+    return tree
 }
 
-print_deps(licensecheck(process.argv[2] || '.'))
+treeify.asLines(mapDeps(licensecheck(process.argv[2] || '.')), false, console.log)
