@@ -1,4 +1,4 @@
-// Based on code shamelessly lifted from https://github.com/shtylman/node-weaklink (with permission)
+// Original based on https://github.com/shtylman/node-weaklink (with permission)
 
 var fs = require('fs')
 var path = require('path')
@@ -20,6 +20,7 @@ function matchLicense(licenseString) {
     return 'nomatch'
 }
 
+// Read source licenses from license-files directory
 fs.readdirSync(licenseDir).forEach(function(name) {
     licenses.push({
         name:name,
@@ -42,50 +43,49 @@ function getReadmeLicense(filename) {
     return null
 }
 
-module.exports = function checkPath(proj_path) {
-    if (!fs.existsSync(proj_path)) {
-        return null
-    }
+module.exports = function checkPath(basePath) {
+    if (!fs.existsSync(basePath))  return null
 
-    var pkg_path = path.join(proj_path, 'package.json')
+    var packgaeJsonPath = path.join(basePath, 'package.json')
 
-    var pkg_info = JSON.parse(fs.readFileSync(pkg_path))
+    var packageJson = JSON.parse(fs.readFileSync(packgaeJsonPath))
     
     var license = 'unknown'
-    var licenseFile
+    var licenseFilePath
 
-    if (pkg_info.license) {
-        license = pkg_info.license
-        licenseFile = pkg_path
-    } else if (pkg_info.licenses) {
-        license = pkg_info.licenses.map(function(license) { 
+    // Check package.json for "license" field
+    if (packageJson.license) {
+        license = packageJson.license
+        licenseFilePath = packgaeJsonPath
+    } else if (packageJson.licenses) { // Check package.json for "licenses" field
+        license = packageJson.licenses.map(function(license) { 
             return license.type + " ("+license.url+")" 
         }).join(', ')
-        licenseFile = pkg_path
-    } else {    
-
-        var files = fs.readdirSync(proj_path)
+        licenseFilePath = packgaeJsonPath
+    } else {
+        // Look for file with "license" in its name
+        var files = fs.readdirSync(basePath)
         files.some(function(name) {
             if (/license/i.test(name)) {
-                var file = path.join(proj_path, name)
+                var file = path.join(basePath, name)
                 if (fs.statSync(file).isFile()) {
                     license = getLicenseType(file)
-                    licenseFile = file
+                    licenseFilePath = file
                     return true
                 }
             }
             return false
         })
-        if (!licenseFile) {
+        if (!licenseFilePath) {
+            // Look for a readme file that might have a license in it
             files.some(function(name) {
                 if (/^readme/i.test(name)) {
-                    var file = path.join(proj_path, name)
-                    console.log("looking at "+file)
+                    var file = path.join(basePath, name)
                     if (fs.statSync(file).isFile()) {
                         var result = getReadmeLicense(file)
                         if (result) {
                             license = result
-                            licenseFile = file
+                            licenseFilePath = file
                             return license !== 'nomatch'
                         }
                     }
@@ -98,9 +98,8 @@ module.exports = function checkPath(proj_path) {
     // array of deps
     var dependencies = []
 
-    var deps = pkg_info.dependencies || {}
-    Object.keys(deps).forEach(function(name) {
-        var res = checkPath(path.join(proj_path, 'node_modules', name))
+    Object.keys(packageJson.dependencies || {}).sort().forEach(function(name) {
+        var res = checkPath(path.join(basePath, 'node_modules', name))
         if (res) {
             res.name = name
             res.deps = res.deps || []
@@ -109,10 +108,10 @@ module.exports = function checkPath(proj_path) {
     })
 
     return {
-        name: pkg_info.name,
-        version: pkg_info.version,
+        name: packageJson.name,
+        version: packageJson.version,
         license: license,
-        licenseFile: licenseFile,
+        licenseFile: licenseFilePath,
         deps: dependencies
     }
 }
