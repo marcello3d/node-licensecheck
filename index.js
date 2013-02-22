@@ -46,22 +46,21 @@ function getReadmeLicense(filename) {
 module.exports = function checkPath(basePath) {
     if (!fs.existsSync(basePath))  return null
 
-    var packgaeJsonPath = path.join(basePath, 'package.json')
+    var packageJsonPath = path.join(basePath, 'package.json')
 
-    var packageJson = JSON.parse(fs.readFileSync(packgaeJsonPath))
+    var packageJson = JSON.parse(fs.readFileSync(packageJsonPath))
     
     var license = 'unknown'
     var licenseFilePath
 
-    // Check package.json for "license" field
-    if (packageJson.license) {
-        license = packageJson.license
-        licenseFilePath = packgaeJsonPath
-    } else if (packageJson.licenses) { // Check package.json for "licenses" field
-        license = packageJson.licenses.map(function(license) { 
-            return license.type + " ("+license.url+")" 
+    // Check package.json for "license" or "licenses" fields
+    if (packageJson.license || packageJson.licenses) {
+        licenseFilePath = packageJsonPath
+        var licenses = packageJson.licenses || []
+        if (packageJson.license) licenses.push(packageJson.license)
+        license = licenses.map(function(license) {
+            return typeof license == 'string' ? license : (license.type + " (" + license.url + ")")
         }).join(', ')
-        licenseFilePath = packgaeJsonPath
     } else {
         // Look for file with "license" in its name
         var files = fs.readdirSync(basePath)
