@@ -17,7 +17,7 @@ function matchLicense(licenseString) {
             return license.name
         }
     }
-    return 'nomatch'
+    return null
 }
 
 // Read source licenses from license-files directory
@@ -30,7 +30,7 @@ fs.readdirSync(licenseDir).forEach(function(name) {
 
 function getLicenseType(filename) {
     var fileContents = fs.readFileSync(filename, "utf8")
-    return matchLicense(fileContents)
+    return matchLicense(fileContents) || 'nomatch'
 }
 
 function getReadmeLicense(filename) {
