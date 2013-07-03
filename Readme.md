@@ -19,10 +19,23 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
 Example
 -------
 
-    $ licensecheck 
-    └─ licensecheck (0.1.0) ── zlib ── package.json
-       ├─ colors (0.6.0-1) ── MIT ── node_modules/colors/MIT-LICENSE.txt
-       └─ treeify (0.4.2) ── MIT (http://lp.mit-license.org/) ── node_modules/treeify/package.json
+```
+$ licensecheck
+└─ licensecheck (0.2.0) ── zlib ── package.json
+   ├─ colors (0.6.0-1) ── MIT ── node_modules/colors/MIT-LICENSE.txt
+   ├─ markdown (0.4.0) ── MIT (http://www.opensource.org/licenses/mit-license.php) ── node_modules/markdown/package.json
+   │  └─ nopt (1.0.10) ── MIT (https://github.com/isaacs/nopt/raw/master/LICENSE) ── node_modules/markdown ~ nopt/package.json
+   │     └─ abbrev (1.0.4) ── MIT (https://github.com/isaacs/abbrev-js/raw/master/LICENSE) ── node_modules/markdown ~ nopt ~ abbrev/package.json
+   └─ treeify (0.4.2) ── MIT (http://lp.mit-license.org/) ── node_modules/treeify/package.json
+
+$ licensecheck -f
+abbrev (1.0.4) ── MIT (https://github.com/isaacs/abbrev-js/raw/master/LICENSE) ── node_modules/markdown ~ nopt ~ abbrev/package.json
+colors (0.6.0-1) ── MIT ── node_modules/colors/MIT-LICENSE.txt
+licensecheck (0.2.0) ── zlib ── package.json
+markdown (0.4.0) ── MIT (http://www.opensource.org/licenses/mit-license.php) ── node_modules/markdown/package.json
+nopt (1.0.10) ── MIT (https://github.com/isaacs/nopt/raw/master/LICENSE) ── node_modules/markdown ~ nopt/package.json
+treeify (0.4.2) ── MIT (http://lp.mit-license.org/) ── node_modules/treeify/package.json
+```
 
 
 How it works
