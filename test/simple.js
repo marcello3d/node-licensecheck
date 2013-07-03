@@ -3,7 +3,7 @@ var path = require('path')
 
 var licensecheck = require('../index.js')
 
-suite('Simple');
+suite('Simple')
 
 function testResult(result, name, license, filename) {
     assert.equal(name, result.name)
@@ -16,9 +16,10 @@ test('licensecheck self', function() {
 
     testResult(result, "licensecheck", "zlib", "package.json")
     
-    assert.equal(2, result.deps.length)
+    assert.equal(3, result.deps.length)
     testResult(result.deps[0], "colors", "MIT", "MIT-LICENSE.txt")
-    testResult(result.deps[1], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
+    testResult(result.deps[1], "markdown", "MIT (http://www.opensource.org/licenses/mit-license.php)", "package.json")
+    testResult(result.deps[2], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
 })
 
 test('licensecheck mochajs', function() {

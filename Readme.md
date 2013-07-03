@@ -27,7 +27,9 @@ Licensecheck looks for license information in the following order:
 1. `package.json` "license" field
 2. `package.json` "licenses" field
 3. file with `license` in its name
-4. file with `readme` in its name and `license` in its text
+4. file with `readme` in its name
+    a. if the filename ends in `.md` or `.markdown`, parses markdown looking for a section with `license` in its name
+    b. otherwise checks for `license` in its text
 
 If matching a file (as opposed to `package.json`), it looks for substrings that match the `license-files` folder (ignoring 
 case, whitespace, punctuation, etc.).

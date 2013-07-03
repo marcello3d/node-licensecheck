@@ -2,6 +2,7 @@
 
 var fs = require('fs')
 var path = require('path')
+var markdown = require('markdown').markdown
 
 var licenseDir = __dirname+"/license-files/"
 
@@ -16,6 +17,9 @@ function matchLicense(licenseString) {
         if (normalized.indexOf(license.contents) >= 0) {
             return license.name
         }
+    }
+    if (!/[\n\f\r]/.test(licenseString) && licenseString.length < 100) {
+        return licenseString.trim()
     }
     return null
 }
@@ -35,11 +39,56 @@ function getLicenseType(filename) {
 
 function getReadmeLicense(filename) {
     var readmeText = fs.readFileSync(filename, "utf8")
-    
-    if (/license/i.test(readmeText)) {
+
+    if (/\.(md|markdown)$/i.test(filename)) {
+        return parseMarkdownLicense(readmeText)
+    }
+
+    if (/licen[cs]e/i.test(readmeText)) {
         return matchLicense(readmeText)
     }
     
+    return null
+}
+
+function parseMarkdownLicense(markdownText) {
+    var license = getMarkdownLicenseSection(markdownText)
+    return license ?
+        (matchLicense(license) || 'nomatch')
+        : matchLicense(markdownText)
+}
+function getMarkdownLicenseSection(text) {
+    // Parse as markdown
+    var tree = markdown.parse(text)
+    for (var i=0; i<tree.length; i++) {
+        var node = tree[i]
+
+        // Find section with "License" in the name
+        if (node[0] == 'header' && /licen[cs]e/i.test(node[2])) {
+            var section = []
+            // Group together all paragraph nodes immediately after the header
+            for (var j=i+1; j<tree.length; j++) {
+                var childNode = tree[j]
+                if (childNode[0] == 'para') {
+                    section.push(childNode[1])
+                } else {
+                    break
+                }
+            }
+            // If we got a license, return it
+            if (section.length) {
+                return section.join('\n\n')
+            }
+            // Otherwise consider using the header contents itself (e.g. "MIT License")
+            if (/.+licen[cs]e/i.test(node[2])) {
+                return node[2]
+            }
+        }
+        // Check if paragraph has 'license' in it, and use it as-is
+        if (node[0] == 'para' && /.+licen[cs]e/i.test(node[1])) {
+            return node[1]
+        }
+    }
     return null
 }
 
