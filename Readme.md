@@ -8,7 +8,13 @@ Installation
 
 Usage
 ------------
-`licensecheck [optional dir]`
+```
+licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
+
+    -m / --missing-only : only list licenses that are unspecified
+    -h regexp / --highlight regexp : highlight licenses entries that match the regular expression (case insensitive)
+
+```
 
 Example
 -------
