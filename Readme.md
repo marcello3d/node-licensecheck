@@ -16,6 +16,11 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
 
 ```
 
+DISCLAIMER
+----------
+
+I am not a lawyer. The output of this app should not be considered legal advice and is not guaranteed to be accurate.
+
 Example
 -------
 
