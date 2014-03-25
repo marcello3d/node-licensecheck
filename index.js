@@ -120,7 +120,7 @@ module.exports = function checkPath(basePath) {
         // Look for file with "license" in its name
         var files = fs.readdirSync(basePath)
         files.some(function(name) {
-            if (/license/i.test(name)) {
+            if (/licen[sc]e/i.test(name)) {
                 var file = path.join(basePath, name)
                 if (fs.statSync(file).isFile()) {
                     license = getLicenseType(file)
