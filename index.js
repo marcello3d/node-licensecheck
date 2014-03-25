@@ -106,7 +106,13 @@ module.exports = function checkPath(basePath) {
     if (packageJson.license || packageJson.licenses) {
         licenseFilePath = packageJsonPath
         var licenses = packageJson.licenses || []
-        if (packageJson.license) licenses.push(packageJson.license)
+        if (!Array.isArray(licenses)) {
+            // Bad JSON, using "licenses" not as an array
+            licenses = [licenses]
+        }
+        if (packageJson.license) {
+            licenses.push(packageJson.license)
+        }
         license = licenses.map(function(license) {
             return typeof license == 'string' ? license : (license.type + " (" + license.url + ")")
         }).join(', ')
