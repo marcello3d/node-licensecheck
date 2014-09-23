@@ -80,12 +80,12 @@ function getDescription(info) {
         var file = info.licenseFile
         if (file) {
             if (info.license == 'nomatch') {
-                key += ('unmatched: ' + file)
+                key += 'unmatched: ' + file + sep
             } else {
                 key += info.license + sep + file
             }
         } else {
-            key += "MISSING"
+            key += "MISSING" + sep
         }
     } else {
         throw Error("invalid format: " + format)
