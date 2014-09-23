@@ -8,6 +8,7 @@ var licensecheck = require('./index.js')
 var path = '.'
 var missingOnly = false
 var flat = false
+var format = 'color'
 var highlight = null
 
 for (var i=2; i<process.argv.length; i++) {
@@ -23,6 +24,10 @@ for (var i=2; i<process.argv.length; i++) {
             break
         case '-f':
         case '--flat':
+            flat = true
+            break
+        case '--tsv':
+            format = 'tsv'
             flat = true
             break
         default:
@@ -45,21 +50,45 @@ function isMissing(info) {
     return !info.licenseFile || info.license == 'nomatch'
 }
 
-function getDescription(info) {
-    var key = info.name + (" (" + info.version + ")").grey + ' ── '
+function simplifyFile(file) {
+    return file.replace(/\/node_modules\//g, ' ~ ')
+}
 
-    var file = info.licenseFile
-    if (file) {
-        file = file.replace(/\/node_modules\//g, ' ~ ')
-        if (info.license == 'nomatch') {
-            key += ('unmatched license file: ' + file).yellow
-        } else if (highlight && highlight.test(info.license)) {
-            key += info.license.magenta + ' ── ' + file.grey
+function getDescription(info) {
+    var key
+    if (format == 'color') {
+        var sep = ' ── '
+        key = info.name + (" (" + info.version + ")").grey + sep
+
+        var file = info.licenseFile
+        if (file) {
+            file = simplifyFile(file)
+            if (info.license == 'nomatch') {
+                key += ('unmatched license file: ' + file).yellow
+            } else if (highlight && highlight.test(info.license)) {
+                key += info.license.magenta + sep + file.grey
+            } else {
+                key += info.license.green + sep + file.grey
+            }
         } else {
-            key += info.license.green + ' ── ' + file.grey
+            key += "no license found".red
+        }
+    } else if (format == 'tsv') {
+        var sep = '\t'
+        key = info.name + " (" + info.version + ")" + sep
+
+        var file = info.licenseFile
+        if (file) {
+            if (info.license == 'nomatch') {
+                key += ('unmatched: ' + file)
+            } else {
+                key += info.license + sep + file
+            }
+        } else {
+            key += "MISSING"
         }
     } else {
-        key += "no license found".red
+        throw Error("invalid format: " + format)
     }
     return key;
 }
