@@ -12,6 +12,8 @@ Usage
 licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
 
     -m / --missing-only : only list licenses that are unspecified
+    -f / --flat : write flattened list of dependencies
+    --tsv : write flattened list of dependencies, tab-separated, wihtout coloring (suitable for parsing)
     -h regexp / --highlight regexp : highlight licenses entries that match the regular expression (case insensitive)
 
 ```
