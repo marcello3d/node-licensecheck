@@ -8,7 +8,7 @@ var licenseDir = __dirname+"/license-files/"
 
 var licenses = []
 function normalizeText(text) {
-    return text.replace(/[^a-z0-9\s]/ig,'').toLowerCase().split(/[\s\n]+/).join(' ')
+    return text.replace(/[^a-z0-9\s]/ig,'').toLowerCase().trim().split(/[\s\n]+/).join(' ')
 }
 function matchLicense(licenseString) {
     var normalized = normalizeText(licenseString)
@@ -114,13 +114,13 @@ module.exports = function checkPath(basePath) {
             licenses.push(packageJson.license)
         }
         license = licenses.map(function(license) {
-            return typeof license == 'string' ? license : (license.type + " (" + license.url + ")")
+            return typeof license == 'string' || !license.url ? license : (license.type + " (" + license.url + ")")
         }).join(', ')
     } else {
-        // Look for file with "license" in its name
+        // Look for file with "license" or "copying" in its name
         var files = fs.readdirSync(basePath)
         files.some(function(name) {
-            if (/licen[sc]e/i.test(name)) {
+            if (/licen[sc]e/i.test(name) || /copying.*/i.test(name)) {
                 var file = path.join(basePath, name)
                 if (fs.statSync(file).isFile()) {
                     license = getLicenseType(file)
