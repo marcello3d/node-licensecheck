@@ -63,11 +63,13 @@ function simplifyFile(file) {
 
 function getDescription(info) {
     var key
+    var sep
+    var file
     if (format === 'color') {
-        var sep = ' ── '
+        sep = ' ── '
         key = info.name + (" (" + info.version + ")").grey + sep
 
-        var file = info.licenseFile
+        file = info.licenseFile
         if (file) {
             file = simplifyFile(file)
             if (info.license === 'nomatch') {
@@ -81,10 +83,10 @@ function getDescription(info) {
             key += "no license found".red
         }
     } else if (format === 'tsv') {
-        var sep = '\t'
+        sep = '\t'
         key = info.name + " (" + info.version + ")" + sep
 
-        var file = info.licenseFile
+        file = info.licenseFile
         if (file) {
             if (info.license === 'nomatch') {
                 key += 'unmatched: ' + file + sep
