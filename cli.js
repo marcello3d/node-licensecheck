@@ -2,16 +2,19 @@
 
 var colors = require('colors')
 var treeify = require('treeify')
+var fs = require('fs')
+var stripJsonComments = require('strip-json-comments')
 
 var licensecheck = require('./index.js')
 
 var path = '.'
+var overridesPath = "./licenses.json"
 var missingOnly = false
 var flat = false
 var format = 'color'
 var highlight = null
 
-for (var i=2; i<process.argv.length; i++) {
+for (var i = 2; i < process.argv.length; i++) {
     var arg = process.argv[i]
     switch (arg) {
         case '-m':
@@ -36,18 +39,22 @@ for (var i=2; i<process.argv.length; i++) {
     }
 }
 
+var overrides = fs.existsSync(overridesPath) &&
+    JSON.parse(stripJsonComments(fs.readFileSync(overridesPath, "utf8"))) || {}
+
+
 if (flat) {
-    var dependencies = makeFlatDependencyMap(licensecheck(path))
-    Object.keys(dependencies).sort().forEach(function(key) {
+    var dependencies = makeFlatDependencyMap(licensecheck(".", path, overrides))
+    Object.keys(dependencies).sort().forEach(function (key) {
         console.log(dependencies[key])
     })
 } else {
-    treeify.asLines(makeDependencyTree(licensecheck(path)), false, console.log)
+    treeify.asLines(makeDependencyTree(licensecheck(".", path, overrides)), false, console.log)
 }
 
 
 function isMissing(info) {
-    return !info.licenseFile || info.license == 'nomatch'
+    return !info.licenseFile || info.license === 'nomatch'
 }
 
 function simplifyFile(file) {
@@ -56,14 +63,14 @@ function simplifyFile(file) {
 
 function getDescription(info) {
     var key
-    if (format == 'color') {
+    if (format === 'color') {
         var sep = ' ── '
         key = info.name + (" (" + info.version + ")").grey + sep
 
         var file = info.licenseFile
         if (file) {
             file = simplifyFile(file)
-            if (info.license == 'nomatch') {
+            if (info.license === 'nomatch') {
                 key += ('unmatched license file: ' + file).yellow
             } else if (highlight && highlight.test(info.license)) {
                 key += info.license.magenta + sep + file.grey
@@ -73,13 +80,13 @@ function getDescription(info) {
         } else {
             key += "no license found".red
         }
-    } else if (format == 'tsv') {
+    } else if (format === 'tsv') {
         var sep = '\t'
         key = info.name + " (" + info.version + ")" + sep
 
         var file = info.licenseFile
         if (file) {
-            if (info.license == 'nomatch') {
+            if (info.license === 'nomatch') {
                 key += 'unmatched: ' + file + sep
             } else {
                 key += info.license + sep + file
@@ -112,11 +119,11 @@ function makeDependencyTree(info) {
 function makeFlatDependencyMap(info) {
     var map = {}
     if (!missingOnly || isMissing(info)) {
-        map[info.name+'@'+info.version] = getDescription(info)
+        map[info.name + '@' + info.version] = getDescription(info)
     }
-    info.deps.forEach(function(dep) {
+    info.deps.forEach(function (dep) {
         var subMap = makeFlatDependencyMap(dep)
-        Object.keys(subMap).forEach(function(key) {
+        Object.keys(subMap).forEach(function (key) {
             if (!map[key]) {
                 map[key] = subMap[key]
             }
