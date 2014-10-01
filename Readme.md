@@ -62,6 +62,23 @@ MIT License (https://spdx.org/licenses/MIT)
 zlib License (https://spdx.org/licenses/Zlib)
 ```
 
+Overrides
+---------
+
+Occasionally, packages will not have a license that can be detected. If you manually verify the license and wish
+to save this, you can add a `licenses.json` file in the top-level directory that contains details of the licenses.
+The format (which may include comments)
+
+````
+/* This file holds overrides used by licensecheck tool, handling dependencies with manually verified licenses that
+   were not uploaded to npm. */
+{
+  "uglify-js": { "license": "BSD", "url": "https://github.com/mishoo/UglifyJS2" },
+  "base64id": { "license": "MIT", "url": "https://github.com/faeldt/base64id" },
+}
+````
+
+Use SPDX license names in this file.
 
 How it works
 ------------

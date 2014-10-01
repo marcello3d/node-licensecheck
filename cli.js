@@ -2,10 +2,13 @@
 
 var colors = require('colors')
 var treeify = require('treeify')
+var fs = require('fs')
+var stripJsonComments = require('strip-json-comments')
 
 var licensecheck = require('./index.js')
 
 var path = '.'
+var overridesPath = "./licenses.json"
 var missingOnly = false
 var flat = false
 var format = 'color'
@@ -36,13 +39,18 @@ for (var i=2; i<process.argv.length; i++) {
     }
 }
 
+var overrides = fs.existsSync(overridesPath) &&
+    JSON.parse(stripJsonComments(fs.readFileSync(overridesPath, "utf8"))) || {}
+
+
+
 if (flat) {
-    var dependencies = makeFlatDependencyMap(licensecheck(path))
+    var dependencies = makeFlatDependencyMap(licensecheck(".", path, overrides))
     Object.keys(dependencies).sort().forEach(function(key) {
         console.log(dependencies[key])
     })
 } else {
-    treeify.asLines(makeDependencyTree(licensecheck(path)), false, console.log)
+    treeify.asLines(makeDependencyTree(licensecheck(".", path, overrides)), false, console.log)
 }
 
 

@@ -14,19 +14,20 @@ function testResult(result, name, license, filename) {
 }
 
 test('licensecheck self', function() {
-    var result = licensecheck(__dirname + "/../")
+    var result = licensecheck('.', __dirname + "/../")
 
     testResult(result, "licensecheck", "zlib License (https://spdx.org/licenses/Zlib)", "package.json")
     
-    assert.equal(4, result.deps.length)
+    assert.equal(5, result.deps.length)
     testResult(result.deps[0], "colors", "MIT License (https://spdx.org/licenses/MIT)", "MIT-LICENSE.txt")
     testResult(result.deps[1], "markdown", "MIT (http://www.opensource.org/licenses/mit-license.php)", "package.json")
     testResult(result.deps[2], "spdx-license-list", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
-    testResult(result.deps[3], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
+    testResult(result.deps[3], "strip-json-comments", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
+    testResult(result.deps[4], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
 })
 
 test('licensecheck mochajs', function() {
-    var result = licensecheck(__dirname + "/../node_modules/mocha")
+    var result = licensecheck('.', __dirname + "/../node_modules/mocha")
 
     testResult(result, "mocha", "unknown")
     

@@ -171,13 +171,27 @@ function formatLicense(license) {
     }
 }
 
-module.exports = function checkPath(basePath) {
-    if (!fs.existsSync(basePath))  return null
+module.exports = function checkPath(packageName, basePath, overrides) {
+    if (!fs.existsSync(basePath)) {
+        return null
+    }
 
     var packageJsonPath = path.join(basePath, 'package.json')
 
     var packageJson = JSON.parse(fs.readFileSync(packageJsonPath))
-    
+
+    if (overrides && overrides[packageName]) {
+        var override = overrides[packageName]
+        var licenseOverride = matchLicense(override.license)
+        return {
+            name: packageName,
+            version: packageJson.version,
+            license: formatLicense(licenseOverride),
+            licenseFile: override.url,
+            deps: []
+        }
+    }
+
     var license = 'unknown'
     var licenseFilePath
 
@@ -230,7 +244,7 @@ module.exports = function checkPath(basePath) {
     var dependencies = []
 
     Object.keys(packageJson.dependencies || {}).sort().forEach(function(name) {
-        var res = checkPath(path.join(basePath, 'node_modules', name))
+        var res = checkPath(name, path.join(basePath, 'node_modules', name), overrides)
         if (res) {
             res.name = name
             res.deps = res.deps || []
