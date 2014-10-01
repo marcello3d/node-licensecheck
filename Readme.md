@@ -26,10 +26,6 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
 
 ```
 
-DISCLAIMER
-----------
-
-I am not a lawyer. The output of this app should not be considered legal advice and is not guaranteed to be accurate.
 
 Examples
 --------
@@ -67,18 +63,19 @@ Overrides
 
 Occasionally, packages will not have a license that can be detected. If you manually verify the license and wish
 to save this, you can add a `licenses.json` file in the top-level directory that contains details of the licenses.
-The format (which may include comments)
+The format (which may include comments) is:
 
 ````
-/* This file holds overrides used by licensecheck tool, handling dependencies with manually verified licenses that
-   were not uploaded to npm. */
+/* This file holds overrides used by the licensecheck tool, handling dependencies
+   with manually verified licenses that were not uploaded to npm. */
 {
-  "uglify-js": { "license": "BSD", "url": "https://github.com/mishoo/UglifyJS2" },
+  "uglify-js": { "license": "BSD-2-Clause", "url": "https://github.com/mishoo/UglifyJS2" },
   "base64id": { "license": "MIT", "url": "https://github.com/faeldt/base64id" },
 }
 ````
 
 Use SPDX license names in this file.
+
 
 How it works
 ------------
@@ -104,8 +101,15 @@ Notes
 
 This is pretty hacky and experimental, so use at your own risk. 
 
+
 License
 -------
 
-License-check is open source software under the [zlib license][1].
+Licensecheck is open source software under the [zlib license][1].
 [1]: LICENSE
+
+
+DISCLAIMER
+----------
+
+I am not a lawyer. The output of this app should not be considered legal advice and is not guaranteed to be accurate.
