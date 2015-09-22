@@ -5,6 +5,8 @@ var path = require('path')
 var markdown = require('markdown').markdown
 var spdxLicenses = require('spdx-license-list/spdx-full')
 
+var normalizeText = require('./normtext')
+
 var licenseDir = __dirname + "/license-files/"
 
 // Alternate abbreviations used by package.json files.
@@ -15,11 +17,6 @@ var licenseAliases = {
 }
 
 var licenses = []
-function normalizeText(text) {
-    // Normalize text for matching purposes.
-    // Consider "-" same as space: Apache-2.0 -> apache 20, Apache 2.0 -> apache 20
-    return text.replace(/[^a-z0-9\s-]/ig, '').toLowerCase().trim().split(/[\s\n-]+/).join(' ')
-}
 
 // Match a license body or license id against known set of licenses.
 function matchLicense(licenseString) {

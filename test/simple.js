@@ -2,6 +2,7 @@ var assert = require('assert')
 var path = require('path')
 
 var licensecheck = require('../index.js')
+var normalizeText = require('../normtext.js')
 
 suite('Simple')
 
@@ -41,4 +42,11 @@ test('licensecheck mochajs', function () {
     testResult(result.deps[5], "jade", "MIT License (https://spdx.org/licenses/MIT)", "LICENSE")
     testResult(result.deps[6], "mkdirp", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
 
+})
+
+test('normalizeText', function() {
+    assert.equal(
+      'my hybrid ambiguous made up uiuc ncsa apache 2.0 or apache 2.0 license',
+      normalizeText(' My hybrid,  (ambiguous!) made-up UIUC/NCSA Apache 2.0 (or Apache-2.0) license.')
+    )
 })
