@@ -10,12 +10,15 @@ var licenseDir = __dirname + "/license-files/"
 // Alternate abbreviations used by package.json files.
 var licenseAliases = {
     "BSD": "BSD-2-Clause",
-    "MIT/X11": "MIT"
+    "MIT/X11": "MIT",
+    "apache version 2.0": "Apache-2.0"
 }
 
 var licenses = []
 function normalizeText(text) {
-    return text.replace(/[^a-z0-9\s]/ig, '').toLowerCase().trim().split(/[\s\n]+/).join(' ')
+    // Normalize text for matching purposes.
+    // Consider "-" same as space: Apache-2.0 -> apache 20, Apache 2.0 -> apache 20
+    return text.replace(/[^a-z0-9\s-]/ig, '').toLowerCase().trim().split(/[\s\n-]+/).join(' ')
 }
 
 // Match a license body or license id against known set of licenses.
@@ -40,8 +43,13 @@ function matchLicense(licenseString) {
     }
     // For single-line license, check if it's a known license id.
     if (matchingLicenses.length === 0 && !/[\n\f\r]/.test(licenseString) && licenseString.length < 100) {
-        var licenseName = licenseString.trim()
-        matchingLicenses.push(licenseIndex[licenseName] || {name: licenseName, id: null})
+        var licenseName = normalizeText(licenseString)
+        var license = licenseIndex[licenseName]
+        if (!license) {
+          license = {name: licenseName, id: null}
+          console.warn("Non-matched license name: " + licenseName)
+        }
+        matchingLicenses.push(license)
     }
     if (matchingLicenses.length === 0) {
         return null;
@@ -60,13 +68,13 @@ Object.keys(spdxLicenses).forEach(function (key) {
     license.signatures = [normalizeText(license.license)]
 
     licenses.push(license)
-
     licenseIndex[key] = license
     licenseIndex[normalizeText(key)] = license
 })
 
 Object.keys(licenseAliases).forEach(function (alias) {
     licenseIndex[alias] = licenseIndex[licenseAliases[alias]]
+    licenseIndex[normalizeText(alias)] = licenseIndex[licenseAliases[alias]]
 })
 
 // Read source licenses from license-files directory

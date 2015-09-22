@@ -34,7 +34,7 @@ test('licensecheck mochajs', function () {
     assert.equal(7, result.deps.length)
 
     testResult(result.deps[0], "commander", "MIT License (https://spdx.org/licenses/MIT)", "Readme.md")
-    testResult(result.deps[1], "debug", "MIT License (https://spdx.org/licenses/MIT)", "Readme.md")
+    testResult(result.deps[1], "debug", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
     testResult(result.deps[2], "diff", "BSD (http://github.com/kpdecker/jsdiff/blob/master/LICENSE)", "package.json")
     testResult(result.deps[3], "glob", 'BSD 2-clause "Simplified" License (https://spdx.org/licenses/BSD-2-Clause)', "package.json")
     testResult(result.deps[4], "growl", "MIT License (https://spdx.org/licenses/MIT)", "Readme.md")
