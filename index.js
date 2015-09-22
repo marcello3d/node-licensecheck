@@ -44,7 +44,8 @@ function matchLicense(licenseString) {
     // For single-line license, check if it's a known license id.
     if (matchingLicenses.length === 0 && !/[\n\f\r]/.test(licenseString) && licenseString.length < 100) {
         var licenseName = normalizeText(licenseString)
-        var license = licenseIndex[licenseName]
+        // If there's an extra "license" on the end of the name, drop it ("MIT License" -> "MIT").
+        var license = licenseIndex[licenseName] || licenseIndex[licenseName.replace(/ licen[sc]e$/, "")]
         if (!license) {
           license = {name: licenseName, id: null}
           console.warn("Non-matched license name: " + licenseName)
