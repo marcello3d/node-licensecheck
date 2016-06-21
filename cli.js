@@ -13,10 +13,18 @@ var missingOnly = false
 var flat = false
 var format = 'color'
 var highlight = null
+var includeDevDependencies = false
+var includeOptDependencies = false
 
 for (var i = 2; i < process.argv.length; i++) {
     var arg = process.argv[i]
     switch (arg) {
+        case '--dev':
+            includeDevDependencies = true
+            break
+        case '--opt':
+            includeOptDependencies = true
+            break
         case '-m':
         case '--missing-only':
             missingOnly = true
@@ -42,14 +50,14 @@ for (var i = 2; i < process.argv.length; i++) {
 var overrides = fs.existsSync(overridesPath) &&
     JSON.parse(stripJsonComments(fs.readFileSync(overridesPath, "utf8"))) || {}
 
-
+var licenses = licensecheck(".", path, overrides, includeDevDependencies, includeOptDependencies)
 if (flat) {
-    var dependencies = makeFlatDependencyMap(licensecheck(".", path, overrides))
+    var dependencies = makeFlatDependencyMap(licenses)
     Object.keys(dependencies).sort().forEach(function (key) {
         console.log(dependencies[key])
     })
 } else {
-    treeify.asLines(makeDependencyTree(licensecheck(".", path, overrides)), false, console.log)
+    treeify.asLines(makeDependencyTree(licenses), false, console.log)
 }
 
 
@@ -67,7 +75,12 @@ function getDescription(info) {
     var file
     if (format === 'color') {
         sep = ' ── '
-        key = info.name + (" (" + info.version + ")").grey + sep
+        key = info.name + (" (" + info.version + ")").grey
+        if (info.depLevel) {
+            key = key + (" [" + info.depLevel + "]").bold.yellow
+        }
+
+        key = key + sep
 
         file = info.licenseFile
         if (file) {
