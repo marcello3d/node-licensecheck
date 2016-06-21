@@ -27,6 +27,21 @@ test('licensecheck self', function () {
     testResult(result.deps[4], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
 })
 
+test('licensecheck --dev', function() {
+    var result = licensecheck('.', __dirname + "/../", null, true)
+
+    testResult(result, "licensecheck", "zlib License (https://spdx.org/licenses/Zlib)", "package.json")
+
+    assert.equal(6, result.deps.length)
+    testResult(result.deps[0], "colors", "MIT License (https://spdx.org/licenses/MIT)", "MIT-LICENSE.txt")
+    testResult(result.deps[1], "markdown", "MIT (http://www.opensource.org/licenses/mit-license.php)", "package.json")
+    testResult(result.deps[2], "mocha", "unknown")
+    assert.equal('Dev', result.deps[2].depLevel)
+    testResult(result.deps[3], "spdx-license-list", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
+    testResult(result.deps[4], "strip-json-comments", "MIT License (https://spdx.org/licenses/MIT)", "package.json")
+    testResult(result.deps[5], "treeify", "MIT (http://lp.mit-license.org/)", "package.json")
+})
+
 test('licensecheck mochajs', function () {
     var result = licensecheck('.', __dirname + "/../node_modules/mocha")
 
