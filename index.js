@@ -177,7 +177,7 @@ function formatLicense(license) {
     }
 }
 
-module.exports = function checkPath(packageName, basePath, overrides) {
+module.exports = function checkPath(packageName, basePath, overrides, includeDevDependencies, includeOptDependencies) {
     if (!fs.existsSync(basePath)) {
         return null
     }
@@ -248,21 +248,32 @@ module.exports = function checkPath(packageName, basePath, overrides) {
 
     // array of deps
     var dependencies = []
+    var pushDependency = function (dependencyLevel) {
+        return function(name) {
+            var res = checkPath(name, path.join(basePath, 'node_modules', name), overrides, includeDevDependencies, includeOptDependencies)
+            if (res) {
+                res.name = name
+                res.deps = res.deps || []
+                res.depLevel = dependencyLevel
+                dependencies.push(res)
+            }
+        };
+    };
 
-    Object.keys(packageJson.dependencies || {}).sort().forEach(function (name) {
-        var res = checkPath(name, path.join(basePath, 'node_modules', name), overrides)
-        if (res) {
-            res.name = name
-            res.deps = res.deps || []
-            dependencies.push(res)
-        }
-    })
+    Object.keys(packageJson.dependencies || {}).forEach(pushDependency(''))
+    if (includeDevDependencies || false) {
+        Object.keys(packageJson.devDependencies || {}).forEach(pushDependency('Dev'))
+    }
+
+    if (includeOptDependencies || false) {
+        Object.keys(packageJson.optionalDependencies || {}).forEach(pushDependency('Opt'))
+    }
 
     return {
         name: packageJson.name,
         version: packageJson.version,
         license: license,
         licenseFile: licenseFilePath,
-        deps: dependencies
+        deps: dependencies.sort(function(dep1, dep2) { return dep1.name.localeCompare(dep2.name) })
     }
 }
