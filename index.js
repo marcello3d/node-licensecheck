@@ -9,6 +9,8 @@ var normalizeText = require('./normtext')
 
 var licenseDir = __dirname + "/license-files/"
 
+var urltoLicense = require('./urltolicense')
+
 // Alternate abbreviations used by package.json files.
 var licenseAliases = {
     "BSD": "BSD-2-Clause",
@@ -172,7 +174,14 @@ function formatLicense(license) {
         return license.name + " (" + "https://spdx.org/licenses/" + license.id + ")"
     } else if (license.name) {
         return license.name
-    } else {
+    } else if (license.url) {
+        var licensename = urltoLicense(license.url)
+        if (licensename)
+          return licensename + " (" + license.url + ")"
+        else
+          throw Error("unknown license: " + JSON.stringify(license))
+    }
+    else {
         throw Error("unknown license: " + JSON.stringify(license))
     }
 }
