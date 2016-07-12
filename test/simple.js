@@ -3,6 +3,7 @@ var path = require('path')
 
 var licensecheck = require('../index.js')
 var normalizeText = require('../normtext.js')
+var urltolicense = require('../urltolicense')
 
 suite('Simple')
 
@@ -64,4 +65,15 @@ test('normalizeText', function() {
       'my hybrid ambiguous made up uiuc ncsa apache 2.0 or apache 2.0 license',
       normalizeText(' My hybrid,  (ambiguous!) made-up UIUC/NCSA Apache 2.0 (or Apache-2.0) license.')
     )
+})
+
+test('urltolicense', function() {
+  assert.equal("MIT", urltolicense("http://www.opensource.org/licenses/MIT"))
+  assert.equal("APACHE-2.0", urltolicense("http://opensource.org/licenses/APACHE-2.0"))
+  assert.equal("EPL-1.0", urltolicense("https://www.opensource.org/licenses/EPL-1.0"))
+  assert.equal("Zlib", urltolicense("https://opensource.org/licenses/Zlib"))
+  assert.equal("BSD-3-Clause", urltolicense("www.opensource.org/licenses/BSD-3-Clause"))
+  assert.equal("ISC", urltolicense("opensource.org/licenses/ISC"))
+  assert.equal("MIT", urltolicense("http://www.opensource.org/licenses/mit-license.php"))
+  assert.equal("LGPL", urltolicense("http://www.opensource.org/licenses/lgpl-license"))
 })
