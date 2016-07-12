@@ -2,37 +2,35 @@
  * Find license name from license url
  */
 
-var urls = {
-  "https://opensource.org/licenses/Apache-2.0"  : "Apache-2.0",
-  "https://opensource.org/licenses/BSD-3-Clause": "BSD-3-Clause",
-  "https://opensource.org/licenses/BSD-2-Clause": "BSD-2-Clause",
-  "https://opensource.org/licenses/MIT"         : "MIT",
-  "https://opensource.org/licenses/GPL-2.0"     : "GPL-2.0",
-  "https://opensource.org/licenses/GPL-3.0"     : "GPL-3.0",
-  "https://opensource.org/licenses/LGPL-2.1"    : "LGPL-2.1",
-  "https://opensource.org/licenses/LGPL-3.0"    : "LGPL-3.0",
-  "https://opensource.org/licenses/MPL-2.0"     : "MPL-2.0",
-  "https://opensource.org/licenses/CDDL-1.0"    : "CDDL-1.0",
-  "https://opensource.org/licenses/EPL-1.0"     : "EPL-1.0",
-  "http://opensource.org/licenses/Apache-2.0"  : "Apache-2.0",
-  "http://opensource.org/licenses/BSD-3-Clause": "BSD-3-Clause",
-  "http://opensource.org/licenses/BSD-2-Clause": "BSD-2-Clause",
-  "http://opensource.org/licenses/mit-license.php" : "MIT",
-  "http://opensource.org/licenses/MIT"         : "MIT",
-  "http://opensource.org/licenses/GPL-2.0"     : "GPL-2.0",
-  "http://opensource.org/licenses/GPL-3.0"     : "GPL-3.0",
-  "http://opensource.org/licenses/LGPL-2.1"    : "LGPL-2.1",
-  "http://opensource.org/licenses/LGPL-3.0"    : "LGPL-3.0",
-  "http://opensource.org/licenses/MPL-2.0"     : "MPL-2.0",
-  "http://opensource.org/licenses/CDDL-1.0"    : "CDDL-1.0",
-  "http://opensource.org/licenses/EPL-1.0"     : "EPL-1.0",
-  "http://www.opensource.org/licenses/mit-license.php" : "MIT",
-  "https://www.opensource.org/licenses/mit-license.php" : "MIT"
+// Check if url is an opensource.org license url
+function isopensourceorgLicense(url) {
+  var re = /(http(s)?\:\/\/)?(www.)?opensource.org\/licenses\/([A-Za-z0-9]|[\-\.\_])+$/
+  return url.match(re)
 }
 
-module.exports = function (url) {
-  if (url in urls)
-    return urls[url];
+// Find and return license name from opensource.org url
+function getopensourceorgLicense(url) {
+  var licensenames = {
+    "mit-license.php": "MIT",
+    "gpl-license": "GPL",
+    "lgpl-license": "LGPL"
+  }
+
+  var array = url.split("/");
+  var license = array[array.length - 1];
+
+  if (license in licensenames)
+    return licensenames[license];
   else
-    return false;
+    return license;
+}
+
+// Find license name from
+module.exports = function (url) {
+
+  if (isopensourceorgLicense(url))
+    return getopensourceorgLicense(url);
+
+  else
+    return "unknown"
 }
