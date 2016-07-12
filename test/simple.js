@@ -76,4 +76,10 @@ test('urltolicense', function() {
   assert.equal("ISC", urltolicense("opensource.org/licenses/ISC"))
   assert.equal("MIT", urltolicense("http://www.opensource.org/licenses/mit-license.php"))
   assert.equal("LGPL", urltolicense("http://www.opensource.org/licenses/lgpl-license"))
+
+  assert.equal("Apache-2.0", urltolicense("http://spdx.org/licenses/Apache-2.0.html"))
+  assert.equal("Apache-2.0", urltolicense("https://spdx.org/licenses/Apache-2.0.html"))
+  assert.equal("MIT", urltolicense("http://www.spdx.org/licenses/MIT.html"))
+  assert.equal("MIT", urltolicense("https://www.spdx.org/licenses/MIT.html"))
+  assert.equal("Apache-2.0", urltolicense("https://www.spdx.org/licenses/Apache-2.0"))
 })
