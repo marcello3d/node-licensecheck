@@ -25,6 +25,7 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
     -h regexp / --highlight regexp : highlight licenses entries that match the regular expression (case insensitive)
     --dev : Include development dependencies
     --opt : Include optional dependencies
+    --hide <license1,license2,...> : Hide packages with given licenses
 
 ```
 
