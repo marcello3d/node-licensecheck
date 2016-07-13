@@ -15,6 +15,15 @@ var format = 'color'
 var highlight = null
 var includeDevDependencies = false
 var includeOptDependencies = false
+var hidelist = [] // list of licenses to omit from output
+
+function isomittedlicense(license) {
+  for (var i = 0; i < hidelist.length; i++) {
+    if (license.split(' ')[0] === hidelist[i])
+      return true
+  }
+  return false
+}
 
 for (var i = 2; i < process.argv.length; i++) {
     var arg = process.argv[i]
@@ -40,6 +49,10 @@ for (var i = 2; i < process.argv.length; i++) {
         case '--tsv':
             format = 'tsv'
             flat = true
+            break
+        case '--hide':
+            i++
+            hidelist = ( process.argv[i] || "" ).split(",")
             break
         default:
             path = arg
@@ -128,12 +141,30 @@ function makeDependencyTree(info) {
             dependencies[key] = dependency[key]
         })
     })
+
+    // Check if the license of the package is to be hidden
+    if (isomittedlicense(info.license)) {
+
+      // Omit the package if it has no dependancies with non hidden license
+      if (Object.keys(tree[key]).length == 0)
+        return {}
+
+      // Otherwise include only the name and version of the package with its dependancies
+      else {
+        var dependencies = tree[key]
+        var key = info.name + (" (" + info.version + ")").grey
+        var tree = {}
+        tree[key] = dependencies
+        return tree
+      }
+    }
+
     return tree
 }
 
 function makeFlatDependencyMap(info) {
     var map = {}
-    if (!missingOnly || isMissing(info)) {
+    if ((!missingOnly || isMissing(info)) && (!isomittedlicense(info.license))) {
         map[info.name + '@' + info.version] = getDescription(info)
     }
     info.deps.forEach(function (dep) {
