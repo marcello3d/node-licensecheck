@@ -47,5 +47,5 @@ module.exports = function (url) {
   if (isspdxLicense(url))
     return getspdxLicense(url);
   else
-    return "unknown"
+    return false
 }

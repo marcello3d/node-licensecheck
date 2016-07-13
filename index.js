@@ -179,10 +179,10 @@ function formatLicense(license) {
         if (licensename)
           return licensename + " (" + license.url + ")"
         else
-          throw Error("unknown license: " + JSON.stringify(license))
+          return "unknown"+ " (" + license.url + ")"
     }
     else {
-        throw Error("unknown license: " + JSON.stringify(license))
+        return "unknown license"
     }
 }
 

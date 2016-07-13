@@ -85,7 +85,9 @@ function getDescription(info) {
         file = info.licenseFile
         if (file) {
             file = simplifyFile(file)
-            if (info.license === 'nomatch') {
+            if (info.license.startsWith('unknown')) {
+                key += info.license.yellow
+            } else if (info.license === 'nomatch') {
                 key += ('unmatched license file: ' + file).yellow
             } else if (highlight && highlight.test(info.license)) {
                 key += info.license.magenta + sep + file.grey
@@ -101,7 +103,9 @@ function getDescription(info) {
 
         file = info.licenseFile
         if (file) {
-            if (info.license === 'nomatch') {
+            if (info.license.startsWith('unknown')) {
+                key += info.license.yellow
+            } else if (info.license === 'nomatch') {
                 key += 'unmatched: ' + file + sep
             } else {
                 key += info.license + sep + file
