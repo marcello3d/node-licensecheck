@@ -188,7 +188,15 @@ function formatLicense(license) {
 
 module.exports = function checkPath(packageName, basePath, overrides, includeDevDependencies, includeOptDependencies) {
     if (!fs.existsSync(basePath)) {
-        return null
+        var dirs = basePath.split(path.sep)
+        if (dirs.length > 2) {
+            // Instead, search for the module in the parent node_modules folder
+            var moduleDirs = dirs.slice(dirs.length - 2, dirs.length)
+            var baseDirs = dirs.slice(0, dirs.length - 4)
+            return checkPath(packageName, baseDirs.concat(moduleDirs).join(path.sep), overrides);
+        } else {
+            return null
+        }
     }
 
     var packageJsonPath = path.join(basePath, 'package.json')
