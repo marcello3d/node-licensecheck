@@ -15,6 +15,8 @@ var format = 'color'
 var highlight = null
 var includeDevDependencies = false
 var includeOptDependencies = false
+var once = false
+var seen = {}
 
 for (var i = 2; i < process.argv.length; i++) {
     var arg = process.argv[i]
@@ -40,6 +42,10 @@ for (var i = 2; i < process.argv.length; i++) {
         case '--tsv':
             format = 'tsv'
             flat = true
+            break
+        case '-o':
+        case '--once':
+            once = true
             break
         default:
             path = arg
@@ -140,6 +146,10 @@ function makeFlatDependencyMap(info) {
     if (!missingOnly || isMissing(info)) {
         map[info.name + '@' + info.version] = getDescription(info)
     }
+    if (once && seen[info.name + '@' + info.version]) {
+        return {}
+    }
+    seen[info.name + '@' + info.version] = true
     info.deps.forEach(function (dep) {
         var subMap = makeFlatDependencyMap(dep)
         Object.keys(subMap).forEach(function (key) {

@@ -21,10 +21,11 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
 
     -m / --missing-only : only list licenses that are unspecified
     -f / --flat : write flattened list of dependencies
-    --tsv : write flattened list of dependencies, tab-separated, wihtout coloring (suitable for parsing)
+    --tsv : write flattened list of dependencies, tab-separated, without coloring (suitable for parsing)
     -h regexp / --highlight regexp : highlight licenses entries that match the regular expression (case insensitive)
-    --dev : Include development dependencies
-    --opt : Include optional dependencies
+    --dev : include development dependencies
+    --opt : include optional dependencies
+    --once : write each dependency only once, even if it appears in several places in the dependency tree
 
 ```
 
