@@ -220,7 +220,7 @@ module.exports = function checkPath(packageName, basePath, overrides, includeDev
         }
         if (Array.isArray(packageJson.license)) {
             // Bad JSON, using "license" as an array
-            licenses = packageJson.license
+            licenses = licenses.concat(packageJson.license)
         } else if (packageJson.license) {
             licenses.push(packageJson.license)
         }
