@@ -218,7 +218,10 @@ module.exports = function checkPath(packageName, basePath, overrides, includeDev
             // Bad JSON, using "licenses" not as an array
             licenses = [licenses]
         }
-        if (packageJson.license) {
+        if (Array.isArray(packageJson.license)) {
+            // Bad JSON, using "license" as an array
+            licenses = licenses.concat(packageJson.license)
+        } else if (packageJson.license) {
             licenses.push(packageJson.license)
         }
         license = licenses.map(getJsonLicense).map(formatLicense).join(', ')
