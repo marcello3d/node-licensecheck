@@ -1,5 +1,7 @@
 // Based on code shamelessly lifted from https://github.com/shtylman/node-weaklink (with permission)
 
+require('colors')
+
 var treeify = require('treeify')
 var fs = require('fs')
 var stripJsonComments = require('strip-json-comments')
