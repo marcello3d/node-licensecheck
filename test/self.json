@@ -2,13 +2,13 @@
   "name": "licensecheck",
   "version": "0.3.0",
   "license": "zlib License (http://www.zlib.net/zlib_license.html\nhttp://www.opensource.org/licenses/Zlib)",
-  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/package.json",
+  "licenseFile": "package.json",
   "deps": [
     {
       "name": "colors",
       "version": "1.1.2",
       "license": "MIT License (http://www.opensource.org/licenses/MIT)",
-      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/colors/package.json",
+      "licenseFile": "node_modules/colors/package.json",
       "deps": [],
       "depLevel": ""
     },
@@ -16,19 +16,19 @@
       "name": "markdown",
       "version": "0.5.0",
       "license": "MIT (http://www.opensource.org/licenses/mit-license.php)",
-      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/markdown/package.json",
+      "licenseFile": "node_modules/markdown/package.json",
       "deps": [
         {
           "name": "nopt",
           "version": "2.1.2",
           "license": "MIT (https://github.com/isaacs/nopt/raw/master/LICENSE)",
-          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/nopt/package.json",
+          "licenseFile": "node_modules/nopt/package.json",
           "deps": [
             {
               "name": "abbrev",
               "version": "1.0.9",
               "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
-              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/abbrev/package.json",
+              "licenseFile": "node_modules/abbrev/package.json",
               "deps": [],
               "depLevel": ""
             }
@@ -42,7 +42,7 @@
       "name": "spdx-license-list",
       "version": "2.1.0",
       "license": "MIT License (http://www.opensource.org/licenses/MIT)",
-      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/spdx-license-list/package.json",
+      "licenseFile": "node_modules/spdx-license-list/package.json",
       "deps": [],
       "depLevel": ""
     },
@@ -50,7 +50,7 @@
       "name": "strip-json-comments",
       "version": "2.0.1",
       "license": "MIT License (http://www.opensource.org/licenses/MIT)",
-      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/strip-json-comments/package.json",
+      "licenseFile": "node_modules/strip-json-comments/package.json",
       "deps": [],
       "depLevel": ""
     },
@@ -58,7 +58,7 @@
       "name": "treeify",
       "version": "1.0.1",
       "license": "MIT (http://lp.mit-license.org/)",
-      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/treeify/package.json",
+      "licenseFile": "node_modules/treeify/package.json",
       "deps": [],
       "depLevel": ""
     }

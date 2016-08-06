@@ -301,7 +301,7 @@ module.exports = function checkPath (packageName, basePath, overrides, includeDe
     name: packageJson.name,
     version: packageJson.version,
     license: license,
-    licenseFile: licenseFilePath,
+    licenseFile: path.relative(process.cwd(), licenseFilePath),
     deps: dependencies.sort(function (dep1, dep2) { return dep1.name.localeCompare(dep2.name) })
   }
 }
