@@ -26,7 +26,7 @@ licensecheck [-m/--missing-only] [-h/--highlight regexp] [optional dir]
     --dev : include development dependencies
     --opt : include optional dependencies
     --once : write each dependency only once, even if it appears in several places in the dependency tree
-
+    --hide <license1,license2,...> : Hide packages with given licenses
 ```
 
 
@@ -102,7 +102,7 @@ Package licenses that include explicit URLs are always preserved (i.e. not norma
 Notes
 -----
 
-This is pretty hacky and experimental, so use at your own risk. 
+This is pretty hacky and experimental, so use at your own risk.
 
 
 License
