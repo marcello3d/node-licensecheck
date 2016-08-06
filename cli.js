@@ -18,7 +18,6 @@ var includeOptDependencies = false
 
 var once = false
 var seen = {}
-
 var hidelist = [] // list of licenses to omit from output
 
 function isOmittedLicense(license) {
@@ -155,7 +154,7 @@ function makeDependencyTree(info) {
     })
 
     // Check if the license of the package is to be hidden
-    if (isOmittedlicense(info.license)) {
+    if (isOmittedLicense(info.license)) {
 
       // Omit the package if it has no dependancies with non hidden license
       if (Object.keys(tree[key]).length == 0)
@@ -176,7 +175,7 @@ function makeDependencyTree(info) {
 
 function makeFlatDependencyMap(info) {
     var map = {}
-    if ((!missingOnly || isMissing(info)) && (!isOmittedlicense(info.license))) {
+    if ((!missingOnly || isMissing(info)) && (!isOmittedLicense(info.license))) {
         map[info.name + '@' + info.version] = getDescription(info)
     }
     if (once && seen[info.name + '@' + info.version]) {
