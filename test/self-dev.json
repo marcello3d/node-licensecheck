@@ -1,0 +1,1307 @@
+{
+  "name": "licensecheck",
+  "version": "0.3.0",
+  "license": "zlib License (http://www.zlib.net/zlib_license.html\nhttp://www.opensource.org/licenses/Zlib)",
+  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/package.json",
+  "deps": [
+    {
+      "name": "colors",
+      "version": "1.1.2",
+      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/colors/package.json",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "eslint-config-standard",
+      "version": "5.3.5",
+      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/eslint-config-standard/package.json",
+      "deps": [
+        {
+          "name": "eslint-plugin-promise",
+          "version": "2.0.1",
+          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/eslint-plugin-promise/package.json",
+          "deps": [],
+          "depLevel": "Dev"
+        },
+        {
+          "name": "eslint-plugin-standard",
+          "version": "2.0.0",
+          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/eslint-plugin-standard/package.json",
+          "deps": [],
+          "depLevel": "Dev"
+        }
+      ],
+      "depLevel": "Dev"
+    },
+    {
+      "name": "markdown",
+      "version": "0.5.0",
+      "license": "MIT (http://www.opensource.org/licenses/mit-license.php)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/markdown/package.json",
+      "deps": [
+        {
+          "name": "nopt",
+          "version": "2.1.2",
+          "license": "MIT (https://github.com/isaacs/nopt/raw/master/LICENSE)",
+          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/nopt/package.json",
+          "deps": [
+            {
+              "name": "abbrev",
+              "version": "1.0.9",
+              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/abbrev/package.json",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "spdx-license-list",
+      "version": "2.1.0",
+      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/spdx-license-list/package.json",
+      "deps": [
+        {
+          "name": "del",
+          "version": "2.2.1",
+          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/del/package.json",
+          "deps": [
+            {
+              "name": "globby",
+              "version": "5.0.0",
+              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/globby/package.json",
+              "deps": [
+                {
+                  "name": "array-union",
+                  "version": "1.0.2",
+                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/array-union/package.json",
+                  "deps": [
+                    {
+                      "name": "array-uniq",
+                      "version": "1.0.3",
+                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/array-uniq/package.json",
+                      "deps": [
+                        {
+                          "name": "es6-set",
+                          "version": "0.1.4",
+                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es6-set/package.json",
+                          "deps": [
+                            {
+                              "name": "d",
+                              "version": "0.1.1",
+                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/d/package.json",
+                              "deps": [
+                                {
+                                  "name": "es5-ext",
+                                  "version": "0.10.12",
+                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es5-ext/package.json",
+                                  "deps": [
+                                    {
+                                      "name": "es6-iterator",
+                                      "version": "2.0.0",
+                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es6-iterator/package.json",
+                                      "deps": [
+                                        {
+                                          "name": "es6-symbol",
+                                          "version": "3.1.0",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es6-symbol/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "event-emitter",
+                                          "version": "0.3.4",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/event-emitter/package.json",
+                                          "deps": [],
+                                          "depLevel": "Dev"
+                                        }
+                                      ],
+                                      "depLevel": ""
+                                    }
+                                  ],
+                                  "depLevel": ""
+                                }
+                              ],
+                              "depLevel": ""
+                            }
+                          ],
+                          "depLevel": "Dev"
+                        },
+                        {
+                          "name": "require-uncached",
+                          "version": "1.0.2",
+                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/require-uncached/package.json",
+                          "deps": [
+                            {
+                              "name": "caller-path",
+                              "version": "0.1.0",
+                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/caller-path/package.json",
+                              "deps": [
+                                {
+                                  "name": "callsites",
+                                  "version": "0.2.0",
+                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/callsites/package.json",
+                                  "deps": [
+                                    {
+                                      "name": "mocha",
+                                      "version": "3.0.1",
+                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/mocha/package.json",
+                                      "deps": [
+                                        {
+                                          "name": "browser-stdout",
+                                          "version": "1.3.0",
+                                          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/browser-stdout/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "commander",
+                                          "version": "2.9.0",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/commander/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "graceful-readlink",
+                                              "version": "1.0.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/graceful-readlink/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            }
+                                          ],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "debug",
+                                          "version": "2.2.0",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/debug/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "ms",
+                                              "version": "0.7.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/ms/LICENSE",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            }
+                                          ],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "diff",
+                                          "version": "1.4.0",
+                                          "license": "BSD (http://github.com/kpdecker/jsdiff/blob/master/LICENSE)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/diff/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "escape-string-regexp",
+                                          "version": "1.0.5",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/escape-string-regexp/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "eslint",
+                                          "version": "3.2.2",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/eslint/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "chalk",
+                                              "version": "1.1.3",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/chalk/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "ansi-styles",
+                                                  "version": "2.2.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/ansi-styles/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "has-ansi",
+                                                  "version": "2.0.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/has-ansi/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "ansi-regex",
+                                                      "version": "2.0.0",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/ansi-regex/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "resolve-from",
+                                                  "version": "1.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/resolve-from/package.json",
+                                                  "deps": [],
+                                                  "depLevel": "Dev"
+                                                },
+                                                {
+                                                  "name": "strip-ansi",
+                                                  "version": "3.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/strip-ansi/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "supports-color",
+                                                  "version": "2.0.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/chalk/node_modules/supports-color/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "concat-stream",
+                                              "version": "1.5.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/concat-stream/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "readable-stream",
+                                                  "version": "2.0.6",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/readable-stream/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "core-util-is",
+                                                      "version": "1.0.2",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/core-util-is/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "isarray",
+                                                      "version": "1.0.0",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/isarray/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "process-nextick-args",
+                                                      "version": "1.0.7",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/process-nextick-args/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "string_decoder",
+                                                      "version": "0.10.31",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/string_decoder/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "util-deprecate",
+                                                      "version": "1.0.2",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/util-deprecate/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "typedarray",
+                                                  "version": "0.0.6",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/typedarray/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "doctrine",
+                                              "version": "1.2.2",
+                                              "license": "BSD (http://github.com/eslint/doctrine/raw/master/LICENSE.BSD)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/doctrine/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "esutils",
+                                                  "version": "1.1.6",
+                                                  "license": "BSD (http://github.com/Constellation/esutils/raw/master/LICENSE.BSD)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/doctrine/node_modules/esutils/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "shelljs",
+                                                  "version": "0.6.0",
+                                                  "license": "BSD 3-clause \"New\" or \"Revised\" License (http://www.opensource.org/licenses/BSD-3-Clause)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/shelljs/package.json",
+                                                  "deps": [],
+                                                  "depLevel": "Dev"
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "escope",
+                                              "version": "3.6.0",
+                                              "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/escope/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "es6-map",
+                                                  "version": "0.1.4",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es6-map/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "es6-weak-map",
+                                                  "version": "2.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/es6-weak-map/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "esrecurse",
+                                                  "version": "4.1.0",
+                                                  "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/esrecurse/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "estraverse",
+                                                      "version": "4.1.1",
+                                                      "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/esrecurse/node_modules/estraverse/package.json",
+                                                      "deps": [
+                                                        {
+                                                          "name": "espree",
+                                                          "version": "3.1.7",
+                                                          "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/espree/package.json",
+                                                          "deps": [
+                                                            {
+                                                              "name": "acorn",
+                                                              "version": "3.3.0",
+                                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/acorn/package.json",
+                                                              "deps": [],
+                                                              "depLevel": ""
+                                                            },
+                                                            {
+                                                              "name": "acorn-jsx",
+                                                              "version": "3.0.1",
+                                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/acorn-jsx/package.json",
+                                                              "deps": [],
+                                                              "depLevel": ""
+                                                            },
+                                                            {
+                                                              "name": "esprima",
+                                                              "version": "2.7.2",
+                                                              "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/esprima/package.json",
+                                                              "deps": [
+                                                                {
+                                                                  "name": "lodash",
+                                                                  "version": "4.14.1",
+                                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash/package.json",
+                                                                  "deps": [],
+                                                                  "depLevel": "Dev"
+                                                                }
+                                                              ],
+                                                              "depLevel": "Dev"
+                                                            }
+                                                          ],
+                                                          "depLevel": "Dev"
+                                                        }
+                                                      ],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "object-assign",
+                                                      "version": "4.1.0",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/object-assign/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "estraverse",
+                                                  "version": "4.2.0",
+                                                  "license": "BSD 2-clause \"Simplified\" License (http://www.opensource.org/licenses/BSD-2-Clause)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/estraverse/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "esutils",
+                                              "version": "2.0.2",
+                                              "license": "BSD (http://github.com/estools/esutils/raw/master/LICENSE.BSD)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/esutils/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "file-entry-cache",
+                                              "version": "1.3.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/file-entry-cache/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "flat-cache",
+                                                  "version": "1.2.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/flat-cache/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "circular-json",
+                                                      "version": "0.3.1",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/circular-json/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "graceful-fs",
+                                                      "version": "4.1.5",
+                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/graceful-fs/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "write",
+                                                      "version": "0.2.1",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/write/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "globals",
+                                              "version": "9.9.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/globals/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "ignore",
+                                              "version": "3.1.3",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/ignore/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "imurmurhash",
+                                              "version": "0.1.4",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/imurmurhash/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "inquirer",
+                                              "version": "0.12.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/inquirer/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "ansi-escapes",
+                                                  "version": "1.4.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/ansi-escapes/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "cli-cursor",
+                                                  "version": "1.0.2",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/cli-cursor/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "restore-cursor",
+                                                      "version": "1.0.1",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/restore-cursor/package.json",
+                                                      "deps": [
+                                                        {
+                                                          "name": "exit-hook",
+                                                          "version": "1.1.1",
+                                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/exit-hook/package.json",
+                                                          "deps": [],
+                                                          "depLevel": ""
+                                                        },
+                                                        {
+                                                          "name": "onetime",
+                                                          "version": "1.1.0",
+                                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/onetime/package.json",
+                                                          "deps": [],
+                                                          "depLevel": ""
+                                                        }
+                                                      ],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "cli-width",
+                                                  "version": "2.1.0",
+                                                  "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/cli-width/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "figures",
+                                                  "version": "1.7.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/figures/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "readline2",
+                                                  "version": "1.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/readline2/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "code-point-at",
+                                                      "version": "1.0.0",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/code-point-at/package.json",
+                                                      "deps": [
+                                                        {
+                                                          "name": "number-is-nan",
+                                                          "version": "1.0.0",
+                                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/number-is-nan/package.json",
+                                                          "deps": [],
+                                                          "depLevel": ""
+                                                        }
+                                                      ],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "is-fullwidth-code-point",
+                                                      "version": "1.0.0",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-fullwidth-code-point/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "mute-stream",
+                                                      "version": "0.0.5",
+                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/mute-stream/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "run-async",
+                                                  "version": "0.1.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/run-async/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "rx-lite",
+                                                  "version": "3.1.2",
+                                                  "license": "Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/rx-lite/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "string-width",
+                                                  "version": "1.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/string-width/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "through",
+                                                  "version": "2.3.8",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/through/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "is-my-json-valid",
+                                              "version": "2.13.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-my-json-valid/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "generate-function",
+                                                  "version": "2.0.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/generate-function/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "generate-object-property",
+                                                  "version": "1.2.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/generate-object-property/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "is-property",
+                                                      "version": "1.0.2",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-property/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "jsonpointer",
+                                                  "version": "2.0.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/jsonpointer/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "xtend",
+                                                  "version": "4.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/xtend/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "is-resolvable",
+                                              "version": "1.0.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-resolvable/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "tryit",
+                                                  "version": "1.0.2",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/tryit/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "js-yaml",
+                                              "version": "3.6.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/js-yaml/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "argparse",
+                                                  "version": "1.0.7",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/argparse/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "sprintf-js",
+                                                      "version": "1.0.3",
+                                                      "license": "BSD 3-clause \"New\" or \"Revised\" License (http://www.opensource.org/licenses/BSD-3-Clause)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/sprintf-js/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "json-stable-stringify",
+                                              "version": "1.0.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/json-stable-stringify/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "jsonify",
+                                                  "version": "0.0.0",
+                                                  "license": "public domain",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/jsonify/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "levn",
+                                              "version": "0.3.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/levn/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "prelude-ls",
+                                                  "version": "1.1.2",
+                                                  "license": "MIT (https://raw.github.com/gkz/prelude-ls/master/LICENSE)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/prelude-ls/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "type-check",
+                                                  "version": "0.3.2",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/type-check/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "optionator",
+                                              "version": "0.8.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/optionator/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "deep-is",
+                                                  "version": "0.1.3",
+                                                  "license": "MIT (https://github.com/thlorenz/deep-is/blob/master/LICENSE)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/deep-is/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "fast-levenshtein",
+                                                  "version": "1.1.4",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/fast-levenshtein/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "wordwrap",
+                                                  "version": "1.0.0",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/wordwrap/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "path-is-inside",
+                                              "version": "1.0.1",
+                                              "license": "Do What The F*ck You Want To Public License (http://sam.zoy.org/wtfpl/COPYING)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/path-is-inside/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "pluralize",
+                                              "version": "1.2.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/pluralize/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "progress",
+                                              "version": "1.1.8",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/progress/LICENSE",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "strip-bom",
+                                              "version": "3.0.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/strip-bom/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "strip-json-comments",
+                                              "version": "1.0.4",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/eslint/node_modules/strip-json-comments/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "table",
+                                              "version": "3.7.8",
+                                              "license": "BSD 3-clause \"New\" or \"Revised\" License (http://www.opensource.org/licenses/BSD-3-Clause)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/table/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "bluebird",
+                                                  "version": "3.4.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/bluebird/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "slice-ansi",
+                                                  "version": "0.0.4",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/slice-ansi/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "tv4",
+                                                  "version": "1.2.7",
+                                                  "license": "nomatch",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/tv4/LICENSE.txt",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "xregexp",
+                                                  "version": "3.1.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/xregexp/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "text-table",
+                                              "version": "0.2.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/text-table/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "user-home",
+                                              "version": "2.0.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/user-home/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "os-homedir",
+                                                  "version": "1.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/os-homedir/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            }
+                                          ],
+                                          "depLevel": "Dev"
+                                        },
+                                        {
+                                          "name": "glob",
+                                          "version": "7.0.5",
+                                          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/glob/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "fs.realpath",
+                                              "version": "1.0.0",
+                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/fs.realpath/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "inflight",
+                                              "version": "1.0.5",
+                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/inflight/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "once",
+                                                  "version": "1.3.3",
+                                                  "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/once/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "wrappy",
+                                                      "version": "1.0.2",
+                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/wrappy/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "inherits",
+                                              "version": "2.0.1",
+                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/inherits/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "minimatch",
+                                              "version": "3.0.2",
+                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/minimatch/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "brace-expansion",
+                                                  "version": "1.1.6",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/brace-expansion/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "balanced-match",
+                                                      "version": "0.4.2",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/balanced-match/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "concat-map",
+                                                      "version": "0.0.1",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/concat-map/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "mkdirp",
+                                              "version": "0.5.1",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/mkdirp/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "minimist",
+                                                  "version": "0.0.8",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/minimist/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": "Dev"
+                                            },
+                                            {
+                                              "name": "path-is-absolute",
+                                              "version": "1.0.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/path-is-absolute/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "rimraf",
+                                              "version": "2.5.4",
+                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/rimraf/package.json",
+                                              "deps": [],
+                                              "depLevel": "Dev"
+                                            }
+                                          ],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "growl",
+                                          "version": "1.9.2",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/growl/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "json3",
+                                          "version": "3.3.2",
+                                          "license": "MIT (http://kit.mit-license.org/)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/json3/package.json",
+                                          "deps": [],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "lodash.create",
+                                          "version": "3.1.1",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash.create/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "lodash._baseassign",
+                                              "version": "3.2.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash._baseassign/package.json",
+                                              "deps": [
+                                                {
+                                                  "name": "lodash._basecopy",
+                                                  "version": "3.0.1",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash._basecopy/package.json",
+                                                  "deps": [],
+                                                  "depLevel": ""
+                                                },
+                                                {
+                                                  "name": "lodash.keys",
+                                                  "version": "3.1.2",
+                                                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash.keys/package.json",
+                                                  "deps": [
+                                                    {
+                                                      "name": "lodash._getnative",
+                                                      "version": "3.9.1",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash._getnative/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "lodash.isarguments",
+                                                      "version": "3.0.9",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash.isarguments/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    },
+                                                    {
+                                                      "name": "lodash.isarray",
+                                                      "version": "3.0.4",
+                                                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash.isarray/package.json",
+                                                      "deps": [],
+                                                      "depLevel": ""
+                                                    }
+                                                  ],
+                                                  "depLevel": ""
+                                                }
+                                              ],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "lodash._basecreate",
+                                              "version": "3.0.3",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash._basecreate/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            },
+                                            {
+                                              "name": "lodash._isiterateecall",
+                                              "version": "3.0.9",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/lodash._isiterateecall/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            }
+                                          ],
+                                          "depLevel": ""
+                                        },
+                                        {
+                                          "name": "supports-color",
+                                          "version": "3.1.2",
+                                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/supports-color/package.json",
+                                          "deps": [
+                                            {
+                                              "name": "has-flag",
+                                              "version": "1.0.0",
+                                              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                                              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/has-flag/package.json",
+                                              "deps": [],
+                                              "depLevel": ""
+                                            }
+                                          ],
+                                          "depLevel": ""
+                                        }
+                                      ],
+                                      "depLevel": "Dev"
+                                    }
+                                  ],
+                                  "depLevel": ""
+                                }
+                              ],
+                              "depLevel": ""
+                            }
+                          ],
+                          "depLevel": "Dev"
+                        }
+                      ],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                },
+                {
+                  "name": "arrify",
+                  "version": "1.0.1",
+                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/arrify/package.json",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "pify",
+                  "version": "2.3.0",
+                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/pify/package.json",
+                  "deps": [
+                    {
+                      "name": "pinkie-promise",
+                      "version": "2.0.1",
+                      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/pinkie-promise/package.json",
+                      "deps": [
+                        {
+                          "name": "pinkie",
+                          "version": "2.0.4",
+                          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                          "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/pinkie/package.json",
+                          "deps": [],
+                          "depLevel": ""
+                        }
+                      ],
+                      "depLevel": "Dev"
+                    }
+                  ],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            },
+            {
+              "name": "is-path-cwd",
+              "version": "1.0.0",
+              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-path-cwd/package.json",
+              "deps": [],
+              "depLevel": ""
+            },
+            {
+              "name": "is-path-in-cwd",
+              "version": "1.0.0",
+              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-path-in-cwd/package.json",
+              "deps": [
+                {
+                  "name": "is-path-inside",
+                  "version": "1.0.0",
+                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/is-path-inside/package.json",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": "Dev"
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "strip-json-comments",
+      "version": "2.0.1",
+      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/strip-json-comments/package.json",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "treeify",
+      "version": "1.0.1",
+      "license": "MIT (http://lp.mit-license.org/)",
+      "licenseFile": "/Users/marcello/Documents/github/node-licensecheck/node_modules/treeify/package.json",
+      "deps": [],
+      "depLevel": ""
+    }
+  ]
+}
