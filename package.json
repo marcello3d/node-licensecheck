@@ -1,32 +1,38 @@
 {
-    "name": "licensecheck",
-    "version": "0.3.0",
-    "description": "A quick way to see the licenses of modules you depend on—recursively.",
-    "homepage": "https://github.com/marcello3d/node-licensecheck",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/marcello3d/node-licensecheck.git"
-    },
-    "author": {
-        "name": "Marcello Bastéa-Forte",
-        "email": "marcello@cellosoft.com",
-        "url": "http://marcello.cellosoft.com/"
-    },
-    "dependencies": {
-        "colors": "0.6.2",
-        "markdown": "0.5.0",
-        "treeify": "1.0.1",
-        "spdx-license-list": "1.1.0",
-        "strip-json-comments": "1.0.1"
-    },
-    "devDependencies": {
-        "mocha":"1.18.2"
-    },
-    "scripts": {
-        "test":"./node_modules/.bin/mocha"
-    },
-    "license": "zlib",
-    "bin": {
-        "licensecheck": "./bin/licensecheck"
-    }
+  "name": "licensecheck",
+  "version": "0.3.0",
+  "description": "A quick way to see the licenses of modules you depend on—recursively.",
+  "homepage": "https://github.com/marcello3d/node-licensecheck",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcello3d/node-licensecheck.git"
+  },
+  "author": {
+    "name": "Marcello Bastéa-Forte",
+    "email": "marcello@cellosoft.com",
+    "url": "http://marcello.cellosoft.com/"
+  },
+  "dependencies": {
+    "colors": "1.1.2",
+    "markdown": "0.5.0",
+    "spdx-license-list": "2.1.0",
+    "strip-json-comments": "2.0.1",
+    "treeify": "1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "3.2.2",
+    "eslint-config-standard": "5.3.5",
+    "eslint-plugin-promise": "2.0.1",
+    "eslint-plugin-standard": "2.0.0",
+    "mocha": "3.0.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test-dev": "mocha --watch",
+    "test": "npm run lint && mocha"
+  },
+  "license": "zlib",
+  "bin": {
+    "licensecheck": "./bin/licensecheck"
+  }
 }
