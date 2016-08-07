@@ -1,6 +1,6 @@
 {
   "name": "licensecheck",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "license": "zlib License (http://www.zlib.net/zlib_license.html\nhttp://www.opensource.org/licenses/Zlib)",
   "licenseFile": "package.json",
   "deps": [
