@@ -49,7 +49,6 @@ function matchLicense (licenseString) {
     license = licenseIndex[licenseName] || licenseIndex[licenseName.replace(/ licen[sc]e$/, '')]
     if (!license) {
       license = {name: licenseName, id: null}
-      console.warn('Non-matched license name: ' + licenseName)
     }
     matchingLicenses.push(license)
   }
