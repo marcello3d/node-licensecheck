@@ -1,6 +1,6 @@
 {
   "name": "licensecheck",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A quick way to see the licenses of modules you depend on—recursively.",
   "homepage": "https://github.com/marcello3d/node-licensecheck",
   "repository": {
