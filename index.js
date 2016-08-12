@@ -49,7 +49,6 @@ function matchLicense (licenseString) {
     license = licenseIndex[licenseName] || licenseIndex[licenseName.replace(/ licen[sc]e$/, '')]
     if (!license) {
       license = {name: licenseName, id: null}
-      console.warn('Non-matched license name: ' + licenseName)
     }
     matchingLicenses.push(license)
   }
@@ -301,7 +300,7 @@ module.exports = function checkPath (packageName, basePath, overrides, includeDe
     name: packageJson.name,
     version: packageJson.version,
     license: license,
-    licenseFile: path.relative(process.cwd(), licenseFilePath),
+    licenseFile: licenseFilePath && path.relative(process.cwd(), licenseFilePath),
     deps: dependencies.sort(function (dep1, dep2) { return dep1.name.localeCompare(dep2.name) })
   }
 }
