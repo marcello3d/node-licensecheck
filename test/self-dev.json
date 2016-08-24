@@ -271,7 +271,7 @@
                                               "deps": [
                                                 {
                                                   "name": "esutils",
-                                                  "license": "BSD (http://github.com/Constellation/esutils/raw/master/LICENSE.BSD)",
+                                                  "license": "BSD (http://github.com/estools/esutils/raw/master/LICENSE.BSD)",
                                                   "deps": [],
                                                   "depLevel": ""
                                                 },
@@ -359,12 +359,6 @@
                                                   "depLevel": ""
                                                 }
                                               ],
-                                              "depLevel": ""
-                                            },
-                                            {
-                                              "name": "esutils",
-                                              "license": "BSD (http://github.com/estools/esutils/raw/master/LICENSE.BSD)",
-                                              "deps": [],
                                               "depLevel": ""
                                             },
                                             {
