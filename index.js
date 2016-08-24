@@ -67,6 +67,9 @@ Object.keys(spdxLicenses).forEach(function (key) {
   var license = spdxLicenses[key]
   license.id = key
   license.signatures = [normalizeText(license.license)]
+  if (license.url) {
+    license.url = license.url.replace(/[\n\r\f]+/, ', ')
+  }
 
   licenses.push(license)
   licenseIndex[key] = license
