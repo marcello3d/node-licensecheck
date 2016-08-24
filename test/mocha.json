@@ -4,7 +4,7 @@
   "deps": [
     {
       "name": "browser-stdout",
-      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
       "deps": [],
       "depLevel": ""
     },
@@ -48,25 +48,25 @@
     },
     {
       "name": "glob",
-      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
       "deps": [
         {
           "name": "fs.realpath",
-          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
           "deps": [],
           "depLevel": ""
         },
         {
           "name": "inflight",
-          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
           "deps": [
             {
               "name": "once",
-              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
               "deps": [
                 {
                   "name": "wrappy",
-                  "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                  "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                   "deps": [],
                   "depLevel": ""
                 }
@@ -78,13 +78,13 @@
         },
         {
           "name": "inherits",
-          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
           "deps": [],
           "depLevel": ""
         },
         {
           "name": "minimatch",
-          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
           "deps": [
             {
               "name": "brace-expansion",
