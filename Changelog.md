@@ -1,3 +1,7 @@
+## UNRELEASED
+
+- remove newlines from spdx license urls that broke output
+
 ## v1.1.0 (2016-08-12)
 
 - fix TypeError

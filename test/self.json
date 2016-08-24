@@ -1,6 +1,6 @@
 {
   "name": "licensecheck",
-  "license": "zlib License (http://www.zlib.net/zlib_license.html\nhttp://www.opensource.org/licenses/Zlib)",
+  "license": "zlib License (http://www.zlib.net/zlib_license.html, http://www.opensource.org/licenses/Zlib)",
   "deps": [
     {
       "name": "colors",
@@ -18,7 +18,7 @@
           "deps": [
             {
               "name": "abbrev",
-              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
               "deps": [],
               "depLevel": ""
             }

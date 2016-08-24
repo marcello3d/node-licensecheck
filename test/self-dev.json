@@ -1,6 +1,6 @@
 {
   "name": "licensecheck",
-  "license": "zlib License (http://www.zlib.net/zlib_license.html\nhttp://www.opensource.org/licenses/Zlib)",
+  "license": "zlib License (http://www.zlib.net/zlib_license.html, http://www.opensource.org/licenses/Zlib)",
   "deps": [
     {
       "name": "colors",
@@ -14,7 +14,7 @@
       "deps": [
         {
           "name": "eslint-plugin-promise",
-          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
           "deps": [],
           "depLevel": "Dev"
         },
@@ -37,7 +37,7 @@
           "deps": [
             {
               "name": "abbrev",
-              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
               "deps": [],
               "depLevel": ""
             }
@@ -125,7 +125,7 @@
                                       "deps": [
                                         {
                                           "name": "browser-stdout",
-                                          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                           "deps": [],
                                           "depLevel": ""
                                         },
@@ -271,7 +271,7 @@
                                               "deps": [
                                                 {
                                                   "name": "esutils",
-                                                  "license": "BSD (http://github.com/Constellation/esutils/raw/master/LICENSE.BSD)",
+                                                  "license": "BSD (http://github.com/estools/esutils/raw/master/LICENSE.BSD)",
                                                   "deps": [],
                                                   "depLevel": ""
                                                 },
@@ -362,12 +362,6 @@
                                               "depLevel": ""
                                             },
                                             {
-                                              "name": "esutils",
-                                              "license": "BSD (http://github.com/estools/esutils/raw/master/LICENSE.BSD)",
-                                              "deps": [],
-                                              "depLevel": ""
-                                            },
-                                            {
                                               "name": "file-entry-cache",
                                               "license": "MIT License (http://www.opensource.org/licenses/MIT)",
                                               "deps": [
@@ -383,7 +377,7 @@
                                                     },
                                                     {
                                                       "name": "graceful-fs",
-                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                                       "deps": [],
                                                       "depLevel": ""
                                                     },
@@ -455,7 +449,7 @@
                                                 },
                                                 {
                                                   "name": "cli-width",
-                                                  "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                  "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                                   "deps": [],
                                                   "depLevel": ""
                                                 },
@@ -490,7 +484,7 @@
                                                     },
                                                     {
                                                       "name": "mute-stream",
-                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                                       "deps": [],
                                                       "depLevel": ""
                                                     }
@@ -737,25 +731,25 @@
                                         },
                                         {
                                           "name": "glob",
-                                          "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                           "deps": [
                                             {
                                               "name": "fs.realpath",
-                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                               "deps": [],
                                               "depLevel": ""
                                             },
                                             {
                                               "name": "inflight",
-                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                               "deps": [
                                                 {
                                                   "name": "once",
-                                                  "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                  "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                                   "deps": [
                                                     {
                                                       "name": "wrappy",
-                                                      "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                                      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                                       "deps": [],
                                                       "depLevel": ""
                                                     }
@@ -767,13 +761,13 @@
                                             },
                                             {
                                               "name": "inherits",
-                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                               "deps": [],
                                               "depLevel": ""
                                             },
                                             {
                                               "name": "minimatch",
-                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                               "deps": [
                                                 {
                                                   "name": "brace-expansion",
@@ -818,7 +812,7 @@
                                             },
                                             {
                                               "name": "rimraf",
-                                              "license": "ISC License (http://www.isc.org/software/license\nhttp://www.opensource.org/licenses/ISC)",
+                                              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
                                               "deps": [],
                                               "depLevel": "Dev"
                                             }
