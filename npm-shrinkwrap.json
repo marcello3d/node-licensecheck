@@ -202,33 +202,6 @@
       "from": "escope@>=3.6.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/escope/-/escope-3.6.0.tgz"
     },
-    "eslint": {
-      "version": "3.2.2",
-      "from": "eslint@3.2.2",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.2.2.tgz",
-      "dependencies": {
-        "strip-json-comments": {
-          "version": "1.0.4",
-          "from": "strip-json-comments@>=1.0.1 <1.1.0",
-          "resolved": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-1.0.4.tgz"
-        }
-      }
-    },
-    "eslint-config-standard": {
-      "version": "5.3.5",
-      "from": "eslint-config-standard@5.3.5",
-      "resolved": "https://registry.npmjs.org/eslint-config-standard/-/eslint-config-standard-5.3.5.tgz"
-    },
-    "eslint-plugin-promise": {
-      "version": "2.0.1",
-      "from": "eslint-plugin-promise@2.0.1",
-      "resolved": "https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-2.0.1.tgz"
-    },
-    "eslint-plugin-standard": {
-      "version": "2.0.0",
-      "from": "eslint-plugin-standard@2.0.0",
-      "resolved": "https://registry.npmjs.org/eslint-plugin-standard/-/eslint-plugin-standard-2.0.0.tgz"
-    },
     "espree": {
       "version": "3.1.7",
       "from": "espree@>=3.1.6 <4.0.0",
@@ -510,18 +483,6 @@
       "version": "0.5.1",
       "from": "mkdirp@>=0.5.0 <0.6.0",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz"
-    },
-    "mocha": {
-      "version": "3.0.1",
-      "from": "mocha@3.0.1",
-      "resolved": "https://registry.npmjs.org/mocha/-/mocha-3.0.1.tgz",
-      "dependencies": {
-        "supports-color": {
-          "version": "3.1.2",
-          "from": "supports-color@3.1.2",
-          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-3.1.2.tgz"
-        }
-      }
     },
     "ms": {
       "version": "0.7.1",
