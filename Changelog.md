@@ -1,3 +1,8 @@
+## UNRELEASED
+
+- update test dependencies
+- remove npm-shrinkwrap.json
+
 ## v1.2.0 (2016-08-24)
 
 - remove newlines from spdx license urls that broke output
