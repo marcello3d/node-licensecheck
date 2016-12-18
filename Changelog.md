@@ -1,4 +1,4 @@
-## UNRELEASED
+## v1.3.0 (2016-12-17)
 
 - update test dependencies
 - remove npm-shrinkwrap.json
